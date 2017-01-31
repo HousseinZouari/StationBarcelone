@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Picture" representedClassName="Picture" syncable="YES">
+        <attribute name="date_p" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pic" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="stat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Station" inverseName="pics" inverseEntity="Station" syncable="YES"/>
+    </entity>
+    <entity name="Station" representedClassName="Station" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Picture" inverseName="stat" inverseEntity="Picture" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Picture" positionX="-18" positionY="36" width="128" height="105"/>
+        <element name="Station" positionX="-45" positionY="0" width="128" height="75"/>
+    </elements>
+</model>
